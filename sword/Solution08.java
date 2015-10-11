@@ -32,7 +32,7 @@ public class Solution08 {
 
 	private int minInOrder(int[] arr, int lo, int hi) {
 		int min = arr[lo];
-		for (int i = lo + 1; i < hi; i++) {
+		for (int i = lo + 1; i <= hi; i++) {
 			if (min > arr[i])
 				min = arr[i];
 		}

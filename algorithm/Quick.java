@@ -20,12 +20,8 @@ public class Quick {
 		int j = hi + 1;
 		int pivot = arr[lo];
 		while (true) {
-			while (arr[++i] < pivot) {
-				if (i == hi)
-					break;
-			}
-			while (arr[--j] > pivot) {
-			}
+			while (arr[++i] < pivot && i != hi) {}
+			while (arr[--j] > pivot) {}
 			if (i >= j)
 				break;
 			Utils.swap(arr, i, j);

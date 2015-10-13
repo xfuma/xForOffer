@@ -7,9 +7,9 @@ package sword;
  *
  */
 public class Solution15 {
-	// 迭代实现，时间O(n)，空间O(1)
+	// 循环实现，时间O(n)，空间O(1)
 	public ListNode findKthToTail(ListNode head, int k) throws Exception {
-		if (k <= 0 || head == null)
+		if (head == null || k <= 0)
 			throw new Exception("输入有误");
 		ListNode p1 = head;
 		ListNode p2 = head;
@@ -25,7 +25,7 @@ public class Solution15 {
 		return p1;
 	}
 
-	// 递归实现，空间O(n)
+	// 递归实现
 	public ListNode findKthToTail2(ListNode head, int k, IntWrapper i) {
 		if (head == null)
 			return null;

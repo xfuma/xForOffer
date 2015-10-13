@@ -1,6 +1,6 @@
 package algorithm;
 
-import sword.Utils;
+import sword.Util;
 
 public class Bubble {
 	public static void sort(int[] arr) {
@@ -9,7 +9,7 @@ public class Bubble {
 			swapped = false;
 			for (int j = arr.length - 1; j > i; j--) {
 				if (arr[j] < arr[j - 1]) {
-					Utils.swap(arr, j, j - 1);
+					Util.swap(arr, j, j - 1);
 					swapped = true;
 				}
 			}

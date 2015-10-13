@@ -20,10 +20,10 @@ public class Solution42_2 {
 	public String leftRotateString2(String str, int k) {
 		if (str.length() < k)
 			return "";
-		char[] c = str.toCharArray();
-		Utils.reverse(c, 0, c.length - 1);
-		Utils.reverse(c, 0, k - 1);
-		Utils.reverse(c, k, c.length - 1);
-		return String.valueOf(c);
+		char[] arr = str.toCharArray();
+		Util.reverse(arr, 0, arr.length - 1);
+		Util.reverse(arr, 0, k - 1);
+		Util.reverse(arr, k, arr.length - 1);
+		return String.valueOf(arr);
 	}
 }

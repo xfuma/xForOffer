@@ -1,6 +1,6 @@
 package algorithm;
 
-import sword.Utils;
+import sword.Util;
 
 public class Quick {
 	public static void sort(int[] arr) {
@@ -24,9 +24,9 @@ public class Quick {
 			while (arr[--j] > pivot) {}
 			if (i >= j)
 				break;
-			Utils.swap(arr, i, j);
+			Util.swap(arr, i, j);
 		}
-		Utils.swap(arr, lo, j);
+		Util.swap(arr, lo, j);
 		return j;
 	}
 }

@@ -9,13 +9,13 @@ import java.util.Stack;
  *
  */
 public class Solution19 {
-	// 循环实现
+	// 递归实现
 	public void mirror(TreeNode root) {
 		if (root == null || (root.left == null && root.right == null))
 			return;
-		TreeNode temp = root.left;
+		TreeNode tmp = root.left;
 		root.left = root.right;
-		root.right = temp;
+		root.right = tmp;
 		mirror(root.left);
 		mirror(root.right);
 	}
@@ -28,9 +28,9 @@ public class Solution19 {
 		TreeNode node = root;
 		while (node != null || !stack.isEmpty()) {
 			while (node != null) {
-				TreeNode temp = node.left;
+				TreeNode tmp = node.left;
 				node.left = node.right;
-				node.right = temp;
+				node.right = tmp;
 				stack.push(node);
 				node = node.left;
 			}

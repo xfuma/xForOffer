@@ -1,6 +1,6 @@
 package algorithm;
 
-import sword.Utils;
+import sword.Util;
 
 public class Selection {
 	public static void sort(int[] arr) {
@@ -10,7 +10,7 @@ public class Selection {
 				if (arr[j] < arr[min])
 					min = j;
 			}
-			Utils.swap(arr, i, min);
+			Util.swap(arr, i, min);
 		}
 	}
 }

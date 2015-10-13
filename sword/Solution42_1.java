@@ -11,24 +11,24 @@ public class Solution42_1 {
 	public String reverseSentence(String str) {
 		if (str.trim().equals(""))
 			return str;
-		char[] c = str.toCharArray();
-		Utils.reverse(c, 0, c.length - 1);
+		char[] arr = str.toCharArray();
+		Util.reverse(arr, 0, arr.length - 1);
 		int lo = 0;
 		int hi = 0;
-		while (lo < c.length) {
-			if (c[lo] == ' ') {
+		while (lo < arr.length) {
+			if (arr[lo] == ' ') {
 				lo++;
 				hi++;
-			} else if (hi == c.length || c[hi] == ' ') {
-				Utils.reverse(c, lo, hi - 1);
+			} else if (hi == arr.length || arr[hi] == ' ') {
+				Util.reverse(arr, lo, hi - 1);
 				lo = ++hi;
 			} else
 				hi++;
 		}
-		return String.valueOf(c);
+		return String.valueOf(arr);
 	}
 
-	// 利用字符串分割
+	// 字符串分割
 	public String reverseSentence2(String str) {
 		if (str.trim().equals(""))
 			return str;

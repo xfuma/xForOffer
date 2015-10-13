@@ -8,18 +8,18 @@ package sword;
  */
 public class Solution16 {
 	public ListNode reverseList(ListNode head) {
-		ListNode reverseHead = null;
+		ListNode reHead = null;
 		ListNode node = head;
 		ListNode pre = null;
 		ListNode next = null;
 		while (node != null) {
 			if (node.next == null)
-				reverseHead = node;
+				reHead = node;
 			next = node.next;
 			node.next = pre;
 			pre = node;
 			node = next;
 		}
-		return reverseHead;
+		return reHead;
 	}
 }

@@ -28,14 +28,15 @@ public class Solution19 {
 		TreeNode node = root;
 		while (node != null || !stack.isEmpty()) {
 			while (node != null) {
-				TreeNode tmp = node.left;
-				node.left = node.right;
-				node.right = tmp;
 				stack.push(node);
 				node = node.left;
 			}
 			node = stack.pop();
-			node = node.right;
+			TreeNode tmp = node.left;
+			node.left = node.right;
+			node.right = tmp;
+			// 其实指向交换前的right
+			node = node.left;
 		}
 	}
 }
